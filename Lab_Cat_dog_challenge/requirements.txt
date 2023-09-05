@@ -1,0 +1,10 @@
+matplotlib
+scipy
+scikit-image
+scikit-learn
+tensorflow
+keras
+opencv-python
+opencv-contrib-python
+imutils
+numpy
