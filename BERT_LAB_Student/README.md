@@ -22,15 +22,15 @@ In this lab, we will use BERT model for some NLP tasks.
 
 ## Before we start
 
-In this lab, and given how computationally expensive BERT is, you can't run the experiments on your local machines. So you will use [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true). All you need to do is to upload all of the notebooks in this folder from you local machine to your Google drive account. Then, when you want to run a specific notebook, simply go to your drive, and open the notebook using google colaboratory.
+In this lab, and given how computationally expensive BERT is, you can't run the experiments on your local machines. So it is recommended to use Mydocker or [Google Colab](https://colab.research.google.com/notebooks/intro.ipynb#recent=true).
 
-**Important note:** every time you start the google colaboratory, make sure you are using a GPU.
-Go to *Edit* -> *Notebook settings*. Then in *Hardware accelerator*, select **GPU**.
 
 ## This lab
 
 In this lab, you will try to get a high-level understanding of BERT. The lab is based on the awesome [Transformers](https://huggingface.co/transformers/) library from huggingface 🤗, and will consist of the following step:
 
+
+- A small lecture to understand what is a Transformer : [illustrated-transformer](http://jalammar.github.io/illustrated-transformer/)
 - Intro to BERT: in this document ([link](intro_to_bert.pdf)), we present a high-level overview of BERT, and go through the necessary components that we need for the rest of
 the lab. Please take a bit of time and read the [intro to bert.pdf](intro_to_bert.pdf).
 - [BERT lab1](BERT_vocabulary.ipynb): investigating the BERT vocabulary.
