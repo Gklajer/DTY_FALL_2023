@@ -9,9 +9,10 @@ from board import Board
 
 class Game(object):
     """Generic class to run a game."""
+
     def __init__(
-            self, player1, player2, cols=7, rows=6, winning_length=4,
-            verbose=False):
+        self, player1, player2, cols=7, rows=6, winning_length=4, verbose=False
+    ):
         self.winning_length = winning_length
         self.board = Board(num_rows=rows, num_cols=cols)
         self.players = [player1, player2]
@@ -34,8 +35,11 @@ class Game(object):
                         return player
 
     def isOver(self):
-        return self.winner is not None or self.board.isFull() \
+        return (
+            self.winner is not None
+            or self.board.isFull()
             or self.moves > self.max_moves
+        )
 
     def reset(self, randomStart=False):
         self.board.reset()
@@ -50,19 +54,22 @@ class Game(object):
         if not self.verbose:
             return
 
-        print(self.board, '\n')
+        print(self.board, "\n")
         if not self.isOver():
             return
 
         if self.winner is not None:
-            print("{0} ({1}) wins!".format(
-                self.winner.name, Board.valueToStr(self.winner.color)))
+            print(
+                "{0} ({1}) wins!".format(
+                    self.winner.name, Board.valueToStr(self.winner.color)
+                )
+            )
         else:
             print("It's a draw!")
 
-    @utils.timeout(0.5)
+    @utils.timeout(2)
     def getColumn(self, player):
-        #sys.stdout = open(os.devnull, 'w')  # disables print
+        # sys.stdout = open(os.devnull, 'w')  # disables print
         return player.getColumn(copy.deepcopy(self.board))
 
     def getColumnNoTimeout(self, player):
